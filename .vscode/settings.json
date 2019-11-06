@@ -1,7 +1,7 @@
 {
     "python.pythonPath": "env/bin/python",
     "git.ignoreLimitWarning": true,
-    // "python.liniting.pep8Enabled": true,
+    // "python.liniting.pycodestyleEnabled": true,
     "python.formatting.provider": "autopep8",
     "python.linting.pylintEnabled": true,
     "python.linting.enabled": true

@@ -13,27 +13,15 @@ def index(request):
 
 
 def scrape(request):
-        """
-        Method to get requested URL from input form and scrape data from instagram
-        """
         url_temp = 'app/scrape.html'
+        if request.method == 'POST':
+                get_url = request.POST['url']
+                get_req = requests.get(get_url)
 
-        # file = open("insta.txt", "w")
-
-        # if request.method == 'POST':
-
-        #         # print('in loop')
-        #         get_url = request.POST['url']
-        #         print(get_url)
-        #         # url_response = requests.get(get_url)
-        #         # soup = bs(url_response.text, 'html5lib')
-                
-        #         # file.write(soup)
-        #         # file.close()
-                
-        #         return render(request, url_temp, {'work': 'THIS WORKED'})
-        context = 'notworking'
-        return render(request, url_temp, context)
+                soup = bs(get_req.text, 'html.parser')
+                print(soup.prettify())
+                return render(request, url_temp)
+        return render(request, url_temp)
 
     
 

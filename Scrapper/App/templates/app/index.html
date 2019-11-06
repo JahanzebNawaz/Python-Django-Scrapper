@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
 
-    <title>Instagram Scrapper - Django App</title>
+    <title>Scrapper - Django App</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -40,7 +40,7 @@
           <form action="/scrape/" method="POST">
             {% csrf_token %}
             <div class="input-group mb-3">
-                    <input type="text" class="form-control" name="url" placeholder="Enter Instagram URL here...">
+                    <input type="text" class="form-control" name="url" id="url" placeholder="Enter TechJuice URL here...">
                     <div class="input-group-prepend">
                         <!-- <button class="btn btn-outline-primary" type="button">Scrape</button> -->
                         <input type="submit" class="btn btn-outline-primary"  value="Scrape">
